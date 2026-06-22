@@ -9,8 +9,17 @@ from nylas.models.auth import CodeExchangeRequest, URLForAuthenticationConfig
 from nylas.models.drafts import EmailName, SendMessageRequest
 from pydantic import BaseModel
 
-# Load env variables
-load_dotenv("../../.env", override=True)
+# 1. Get the absolute path of the directory containing config_auth.py (app/config)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# 2. Go up exactly two directory levels to reach the root folder (ai-assistant)
+root_dir = os.path.dirname(os.path.dirname(current_dir))
+
+# 3. Join that path directly to the .env file name
+env_path = os.path.join(root_dir, ".env")
+
+# 4. Load it cleanly into memory
+load_dotenv(dotenv_path=env_path, override=True)
 
 # Create FastAPI app
 app = FastAPI(title="Nylas Email App")
