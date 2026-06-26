@@ -1,0 +1,6 @@
+{
+  "messages": [
+    {"content": "Explain what a Python decorator is in one sentence.", "role": "user"}
+  ],
+  "model": "gpt-5.4-mini"
+}

@@ -1,0 +1,6 @@
+{
+  "from_email": "alex@example.com",
+  "sender": "Alex",
+  "subject": "Question about my invoice",
+  "body": "Can you help me understand where to download my invoice?"
+}

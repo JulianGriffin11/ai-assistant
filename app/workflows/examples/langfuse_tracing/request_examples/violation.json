@@ -1,0 +1,8 @@
+{
+  "event": "comment_posted",
+  "timestamp": "2026-04-17T12:00:00Z",
+  "comment_id": "comment-123",
+  "thread_id": "thread-abc",
+  "user_id": "user-42",
+  "content": "This is a test comment that should be evaluated for policy violations."
+}
