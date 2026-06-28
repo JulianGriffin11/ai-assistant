@@ -2,7 +2,7 @@ from core.schema import WorkflowSchema, NodeConfig
 from core.workflow import Workflow
 from schemas.nylas_webhook_schema import WebhookEvent
 from workflows.email_workflow_nodes.email_filter_node import EmailFilterNode
-
+from workflows.email_workflow_nodes.classification_node import ClassificationNode
 
 class EmailWorkflow(Workflow):
     workflow_schema = WorkflowSchema(
@@ -12,7 +12,7 @@ class EmailWorkflow(Workflow):
         nodes=[
             NodeConfig(
                 node=EmailFilterNode,
-                connections=[],
+                connections=[ClassificationNode],
                 description="",
                 parallel_nodes=[],
             ),
