@@ -1,0 +1,42 @@
+{
+    "specversion": "1.0",
+    "type": "message.created",
+    "source": "/google/emails/realtime",
+    "id": "6knAnVvbTvB4AZeVYadjMR5446",
+    "time": 1782665446,
+    "webhook_delivery_attempt": 1,
+    "data": {
+        "application_id": "e960bc2e-e980-465f-91d7-e34835207f6a",
+        "object": {
+            "attachments": [],
+            "bcc": [],
+            "body": "\r\nHello there,\r\n\r\nWe've received your message and will get back to you as soon as possible!\r\n",
+            "cc": [],
+            "date": 1782665444,
+            "folders": [
+                "UNREAD",
+                "SENT",
+                "INBOX"
+            ],
+            "from": [
+                {
+                    "email": "juliangriffinj@gmail.com"
+                }
+            ],
+            "grant_id": "00da88eb-58a4-46b7-8b3b-aaa1508e4564",
+            "id": "19f0f23fec62665d",
+            "object": "message",
+            "reply_to": [],
+            "snippet": "Hello there, We've received your message and will get back to you as soon as possible!",
+            "starred": false,
+            "subject": "Quick question regarding our training schedule next week",
+            "thread_id": "19f066ccbb3a883c",
+            "to": [
+                {
+                    "email": "juliangriffinj@gmail.com"
+                }
+            ],
+            "unread": true
+        }
+    }
+}

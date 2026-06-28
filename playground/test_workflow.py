@@ -33,7 +33,7 @@ invoice_event = EventLoader.load_event(
 # --------------------------------------------------------------
 
 workflow = EmailWorkflow()
-result = workflow.run(invoice_event)  # you can change this to message_event or spam_event to test different scenarios
+result = workflow.run(message_event)  # you can change this to message_event or spam_event to test different scenarios
 
 print(result.nodes["ClassificationNode"]["result"].output.category)
 print(result.model_dump_json(indent=4))
