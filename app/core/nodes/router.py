@@ -1,10 +1,8 @@
 from abc import ABC, abstractmethod
-from typing import Optional, Type
+from typing import Optional
 
-from pydantic import BaseModel
-
-from launchpad.core.task import TaskContext
-from launchpad.core.nodes.base import Node
+from core.task import TaskContext
+from core.nodes.base import Node
 
 """
 Router Module
@@ -27,14 +25,23 @@ class BaseRouter(Node):
         fallback: Optional default node to route to if no rules match
     """
 
-    async def process(self, task_context: TaskContext) -> TaskContext:
-        pass
+    def process(self, task_context: TaskContext) -> TaskContext:
+        """Processes the routing logic and updates task context.
+
+        Args:
+            task_context: Current task execution context
+
+        Returns:
+            Updated TaskContext
+        """
+        return task_context
 
     def route(self, task_context: TaskContext) -> Node:
         """Determines the next node based on routing rules.
 
         Evaluates each routing rule in sequence and returns the first
         matching node. Falls back to the default node if no rules match.
+        Also stores the routing decision in the task context.
 
         Args:
             task_context: Current task execution context
@@ -43,17 +50,19 @@ class BaseRouter(Node):
             The next node to execute, or None if no route is found
         """
         for route_node in self.routes:
-            route_node.task_context = task_context
             next_node = route_node.determine_next_node(task_context)
             if next_node:
+                task_context.nodes[self.node_name] = {"next_node": next_node.node_name}
                 return next_node
+
+        # Handle fallback case
+        task_context.nodes[self.node_name] = {
+            "next_node": self.fallback.node_name if self.fallback else None
+        }
         return self.fallback if self.fallback else None
 
 
 class RouterNode(ABC):
-    def __init__(self, task_context: TaskContext = None):
-        self.task_context = task_context
-
     @abstractmethod
     def determine_next_node(self, task_context: TaskContext) -> Optional[Node]:
         pass
@@ -61,9 +70,3 @@ class RouterNode(ABC):
     @property
     def node_name(self):
         return self.__class__.__name__
-
-    def save_output(self, output: BaseModel):
-        self.task_context.nodes[self.node_name] = output
-
-    def get_output(self, node_class: Type[Node]):
-        return self.task_context.nodes.get(node_class.__name__, None)

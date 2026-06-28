@@ -1,5 +1,6 @@
 # Import packages
 import hashlib
+import json
 import hmac
 import os
 from typing import Optional
@@ -82,7 +83,7 @@ def store_event_json(event: WebhookEvent):
     events_dir.mkdir(parents=True, exist_ok=True)
     filename = events_dir / f"{uuid.uuid1()}.json"
     with open(filename, "w") as f:
-        f.write(event.model_dump_json())
+        json.dump(event.model_dump(), f, indent=4)
 
 
 # Run our application

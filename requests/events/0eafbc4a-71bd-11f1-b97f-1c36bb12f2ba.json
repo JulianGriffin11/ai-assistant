@@ -1,0 +1,45 @@
+{
+    "specversion": "1.0",
+    "type": "message.created",
+    "source": "/google/emails/realtime",
+    "id": "E2d9n3gtqDp9r5XHb5UWUJ9223",
+    "time": 1782519223,
+    "webhook_delivery_attempt": 1,
+    "data": {
+        "application_id": "e960bc2e-e980-465f-91d7-e34835207f6a",
+        "object": {
+            "attachments": [],
+            "bcc": [],
+            "body": "<div dir=\"ltr\">Congratulations! Your email address was selected as our grand prize winner today. Click this link immediately to fill out your survey and claim your cash reward before it expires!</div>\r\n",
+            "cc": [],
+            "date": 1782519209,
+            "folders": [
+                "UNREAD",
+                "IMPORTANT",
+                "SENT",
+                "INBOX"
+            ],
+            "from": [
+                {
+                    "email": "juliangriffinj@gmail.com",
+                    "name": "Julian Griffin"
+                }
+            ],
+            "grant_id": "00da88eb-58a4-46b7-8b3b-aaa1508e4564",
+            "id": "19f066ca07e6a25e",
+            "object": "message",
+            "reply_to": [],
+            "snippet": "Congratulations! Your email address was selected as our grand prize winner today. Click this link immediately to fill out your survey and claim your cash reward before it expires!",
+            "starred": false,
+            "subject": "URGENT: Claim your $5,000 Walmart Gift Card NOW!!",
+            "thread_id": "19f066c4a20b7e75",
+            "to": [
+                {
+                    "email": "juliangriffinj@gmail.com",
+                    "name": "Julian Griffin"
+                }
+            ],
+            "unread": true
+        }
+    }
+}

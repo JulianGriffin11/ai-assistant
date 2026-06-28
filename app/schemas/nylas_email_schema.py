@@ -1,5 +1,8 @@
 from pydantic import BaseModel, Field
 
+class Sender(BaseModel):
+    email: str
+    name: str
 
 class EmailObject(BaseModel):
     attachments: list = []
@@ -8,7 +11,7 @@ class EmailObject(BaseModel):
     cc: list = []
     date: int
     folders: list = []
-    from_: list = Field(..., alias="from")
+    from_: Sender = Field(..., alias="from")
     grant_id: str
     id: str
     object: str

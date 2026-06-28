@@ -1,0 +1,56 @@
+{
+    "specversion": "1.0",
+    "type": "message.created",
+    "source": "/google/emails/realtime",
+    "id": "HHadhsAcMwjKXSvNyExFa39425",
+    "time": 1782519425,
+    "webhook_delivery_attempt": 1,
+    "data": {
+        "application_id": "e960bc2e-e980-465f-91d7-e34835207f6a",
+        "object": {
+            "attachments": [
+                {
+                    "content_disposition": "attachment; filename=\"sample_invoice.pdf\"",
+                    "content_id": "f_mqvm1g100",
+                    "content_type": "application/pdf; name=\"sample_invoice.pdf\"",
+                    "filename": "sample_invoice.pdf",
+                    "grant_id": "00da88eb-58a4-46b7-8b3b-aaa1508e4564",
+                    "id": "v0:c2FtcGxlX2ludm9pY2UucGRm:YXBwbGljYXRpb24vcGRmOyBuYW1lPSJzYW1wbGVfaW52b2ljZS5wZGYi:13214",
+                    "is_inline": false,
+                    "size": 13214
+                }
+            ],
+            "bcc": [],
+            "body": "<div dir=\"ltr\">Please find attached your monthly statement for data pipeline infrastructure usage. The total amount due is $142.50, payable via credit card or bank transfer by the end of the week.</div>\r\n",
+            "cc": [],
+            "date": 1782519422,
+            "folders": [
+                "UNREAD",
+                "IMPORTANT",
+                "SENT",
+                "INBOX"
+            ],
+            "from": [
+                {
+                    "email": "juliangriffinj@gmail.com",
+                    "name": "Julian Griffin"
+                }
+            ],
+            "grant_id": "00da88eb-58a4-46b7-8b3b-aaa1508e4564",
+            "id": "19f066fe3df7f2c2",
+            "object": "message",
+            "reply_to": [],
+            "snippet": "Please find attached your monthly statement for data pipeline infrastructure usage. The total amount due is $142.50, payable via credit card or bank transfer by the end of the week.",
+            "starred": false,
+            "subject": "Invoice #2026-88490 due for cloud processing services",
+            "thread_id": "19f066d80de44c6a",
+            "to": [
+                {
+                    "email": "juliangriffinj@gmail.com",
+                    "name": "Julian Griffin"
+                }
+            ],
+            "unread": true
+        }
+    }
+}

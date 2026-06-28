@@ -1,8 +1,8 @@
 from collections import deque
 from typing import Set, Type
 
-from launchpad.core.nodes.base import Node
-from launchpad.core.schema import WorkflowSchema
+from core.nodes.base import Node
+from core.schema import WorkflowSchema
 
 """
 Workflow Validator Module

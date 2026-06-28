@@ -2,7 +2,7 @@ from typing import List, Type, Optional
 
 from pydantic import BaseModel, Field
 
-from launchpad.core.nodes.base import Node
+from core.nodes.base import Node
 
 """
 Workflow Schema Module
@@ -24,7 +24,7 @@ class NodeConfig(BaseModel):
         connections: List of Node classes this node can connect to
         is_router: Flag indicating if this node performs routing logic
         description: Optional description of the node's purpose
-        concurrent_nodes: Optional list of Node classes that can run concurrently
+        parallel_nodes: Optional list of Node classes that can run in parallel
 
     Example:
         config = NodeConfig(
@@ -32,7 +32,7 @@ class NodeConfig(BaseModel):
             connections=[RouterNode],
             is_router=False,
             description="Analyzes incoming requests"
-            concurrent_nodes=[FilterContentGuardrailNode, FilterSQLInjectionGuardrailNode]
+            parallel_nodes=[FilterContentGuardrailNode, FilterSQLInjectionGuardrailNode]
         )
     """
 
@@ -40,7 +40,7 @@ class NodeConfig(BaseModel):
     connections: List[Type[Node]] = Field(default_factory=list)
     is_router: bool = False
     description: Optional[str] = None
-    concurrent_nodes: Optional[List[Type[Node]]] = Field(default_factory=list)
+    parallel_nodes: Optional[List[Type[Node]]] = Field(default_factory=list)
 
 
 class WorkflowSchema(BaseModel):

@@ -1,0 +1,45 @@
+{
+    "specversion": "1.0",
+    "type": "message.created",
+    "source": "/google/emails/realtime",
+    "id": "aBCM2tGK2KtNttajTYTNfh9248",
+    "time": 1782519248,
+    "webhook_delivery_attempt": 1,
+    "data": {
+        "application_id": "e960bc2e-e980-465f-91d7-e34835207f6a",
+        "object": {
+            "attachments": [],
+            "bcc": [],
+            "body": "<div dir=\"ltr\">Hey Julian, just wanted to check if we are still on for the Tuesday session at the academy, or if the time shifted. Let me know what works best for you.</div>\r\n",
+            "cc": [],
+            "date": 1782519246,
+            "folders": [
+                "UNREAD",
+                "IMPORTANT",
+                "SENT",
+                "INBOX"
+            ],
+            "from": [
+                {
+                    "email": "juliangriffinj@gmail.com",
+                    "name": "Julian Griffin"
+                }
+            ],
+            "grant_id": "00da88eb-58a4-46b7-8b3b-aaa1508e4564",
+            "id": "19f066d2d487da31",
+            "object": "message",
+            "reply_to": [],
+            "snippet": "Hey Julian, just wanted to check if we are still on for the Tuesday session at the academy, or if the time shifted. Let me know what works best for you.",
+            "starred": false,
+            "subject": "Quick question regarding our training schedule next week",
+            "thread_id": "19f066ccbb3a883c",
+            "to": [
+                {
+                    "email": "juliangriffinj@gmail.com",
+                    "name": "Julian Griffin"
+                }
+            ],
+            "unread": true
+        }
+    }
+}
